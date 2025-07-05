@@ -1,54 +1,69 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ExternalLink, Github, Database, Server, Globe } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { ExternalLink, Github, Database, Server, Globe } from "lucide-react";
 
 const Projects = () => {
   const projects = [
     {
       title: "College Library Management System",
-      description: "A comprehensive library management system built with modern backend technologies to handle book inventory, user management, and borrowing operations efficiently.",
-      technologies: ["Node.js", "Express.js", "MongoDB", "REST API"],
+      description:
+        "A web app that automates daily library tasks like book inventory, issue/return tracking, and user authentication. Improves accuracy and efficiency for librarians and students.",
+      technologies: {
+        Frontend: ["HTML", "CSS", "JavaScript"],
+        Backend: ["Java (Servlets/JSP) "],
+        Database: ["MySQL/SQL"],
+      },
       features: [
-        "Book catalog management with search functionality",
-        "User authentication and authorization",
-        "Borrowing and return tracking system",
-        "Admin dashboard for library operations"
+        "User Login System",
+        "Book Management",
+        "Issue & Return Tracking",
+        "Reports Generation",
       ],
       icon: Database,
       demoLink: "#",
       githubLink: "https://github.com/Aishwaryasaundane",
-      status: "Completed"
+      status: "Completed",
     },
     {
       title: "Online Book Store",
-      description: "E-commerce platform for book sales with secure payment integration, inventory management, and user-friendly shopping experience.",
-      technologies: ["Java", "Spring Boot", "MySQL", "Payment Gateway"],
+      description:
+        "A web-based bookstore that lets users register, browse books, manage a shopping cart, and place orders online through an intuitive interface.",
+      technologies: {
+        Frontend: ["HTML", "CSS", "JavaScript"],
+        Backend: ["Java (Servlets/JSP) "],
+        Database: ["MySQL/SQL"],
+      },
       features: [
-        "Product catalog with advanced filtering",
-        "Shopping cart and wishlist functionality",
-        "Secure payment processing",
-        "Order tracking and management"
+        "User Login System",
+        "Book Browsing & Search",
+        "Shopping Cart",
+        "Order Management",
       ],
       icon: Globe,
       demoLink: "#",
       githubLink: "https://github.com/Aishwaryasaundane",
-      status: "Completed"
+      status: "Completed",
     },
     {
       title: "Online Examination System",
-      description: "Secure online examination platform with real-time monitoring, automated grading, and comprehensive result analytics for educational institutions.",
-      technologies: ["Python", "Django", "PostgreSQL", "WebSocket"],
+      description:
+        "A web app using PHP & MySQL for secure online exams with instant results, question bank management, and exam scheduling.",
+      technologies: {
+        Frontend: ["HTML", "CSS", "JavaScript"],
+        Backend: ["PHP"],
+        Database: ["MySQL"],
+      },
       features: [
-        "Secure exam environment with anti-cheating measures",
-        "Real-time exam monitoring",
-        "Automated grading system",
-        "Detailed analytics and reporting"
+        "User Login System",
+        "Exam Management",
+        "Question Bank",
+        "Instant Results",
       ],
       icon: Server,
       demoLink: "#",
       githubLink: "https://github.com/Aishwaryasaundane",
-      status: "In Progress"
-    }
+      status: "Completed",
+    },
   ];
 
   return (
@@ -66,7 +81,8 @@ const Projects = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto mb-6"></div>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Here are some of my key projects that showcase my backend development skills and problem-solving abilities.
+            Here are some of my key projects that showcase my backend
+            development skills and problem-solving abilities.
           </p>
         </motion.div>
 
@@ -86,26 +102,37 @@ const Projects = () => {
                   <project.icon className="h-6 w-6 text-white" />
                 </div>
                 <div className="flex items-center space-x-1">
-                  <div className={`w-3 h-3 rounded-full ${
-                    project.status === 'Completed' ? 'bg-green-400' : 'bg-yellow-400'
-                  }`}></div>
-                  <span className="text-sm text-gray-400">{project.status}</span>
+                  <div
+                    className={`w-3 h-3 rounded-full ${
+                      project.status === "Completed"
+                        ? "bg-green-400"
+                        : "bg-yellow-400"
+                    }`}
+                  ></div>
+                  <span className="text-sm text-gray-400">
+                    {project.status}
+                  </span>
                 </div>
               </div>
 
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
                 {project.title}
               </h3>
-              
+
               <p className="text-gray-300 mb-4 leading-relaxed">
                 {project.description}
               </p>
 
               <div className="mb-4">
-                <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features:</h4>
+                <h4 className="text-sm font-semibold text-purple-400 mb-2">
+                  Key Features:
+                </h4>
                 <ul className="space-y-1">
                   {project.features.map((feature, idx) => (
-                    <li key={idx} className="text-sm text-gray-400 flex items-start">
+                    <li
+                      key={idx}
+                      className="text-sm text-gray-400 flex items-start"
+                    >
                       <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 mr-2 flex-shrink-0"></div>
                       {feature}
                     </li>
@@ -115,14 +142,17 @@ const Projects = () => {
 
               <div className="mb-6">
                 <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, idx) => (
-                    <span
-                      key={idx}
-                      className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm border border-purple-500/30"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                  {Object.entries(project.technologies).map(
+                    ([category, techs]) =>
+                      techs.map((tech, idx) => (
+                        <span
+                          key={category + idx}
+                          className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm border border-purple-500/30"
+                        >
+                          {tech}
+                        </span>
+                      ))
+                  )}
                 </div>
               </div>
 
@@ -136,7 +166,7 @@ const Projects = () => {
                   <ExternalLink className="h-4 w-4" />
                   <span>Demo</span>
                 </motion.a>
-                
+
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

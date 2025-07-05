@@ -5,7 +5,7 @@ import { Code, Database, Server, Cloud, Globe, GitBranch } from "lucide-react";
 const Skills = () => {
   const skills = [
     { name: "JavaScript", icon: Code, color: "text-yellow-400" },
-    { name: "C++", icon: Code, color: "text-blue-400" },
+    { name: "Java", icon: Code, color: "text-blue-400" },
     { name: "Node.js", icon: Server, color: "text-green-500" },
     { name: "Express.js", icon: Server, color: "text-gray-400" },
     { name: "REST APIs", icon: Cloud, color: "text-purple-400" },
@@ -57,7 +57,7 @@ const Skills = () => {
           ))}
         </div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -75,7 +75,7 @@ const Skills = () => {
               to enhance my expertise.
             </p>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

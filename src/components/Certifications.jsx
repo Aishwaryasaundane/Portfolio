@@ -5,41 +5,41 @@ import { Award, ExternalLink, Calendar, CheckCircle } from 'lucide-react';
 const Certifications = () => {
   const certifications = [
     {
-      title: "Backend Development Certification",
-      issuer: "Tech Institute",
-      date: "2024",
+      title: "C Programming Course",
+      issuer: "KKWIEER",
+      date: "2023",
       status: "Completed",
       description: "Comprehensive certification covering Node.js, Express.js, databases, and API development best practices.",
-      skills: ["Node.js", "Express.js", "MongoDB", "REST APIs"],
+      skills: ["C"],
       driveLink: "https://drive.google.com/file/d/your-cert-id-1"
     },
     {
-      title: "Database Management Systems",
-      issuer: "Online Learning Platform",
-      date: "2023",
+      title: "C++ Programming Course",
+      issuer: "Pantech e-Learning Pvt Ltd",
+      date: "2024",
       status: "Completed",
       description: "Advanced certification in database design, optimization, and management with focus on SQL and NoSQL databases.",
-      skills: ["MySQL", "PostgreSQL", "MongoDB", "Database Design"],
+      skills: ["C++"],
       driveLink: "https://drive.google.com/file/d/your-cert-id-2"
     },
     {
-      title: "Cloud Computing Fundamentals",
-      issuer: "Cloud Academy",
+      title: "JavaFull Stack Course",
+      issuer: "Symbosis Acdaemy",
       date: "2024",
-      status: "In Progress",
-      description: "Learning cloud computing concepts, AWS services, and cloud-based backend deployment strategies.",
-      skills: ["AWS", "Cloud Architecture", "Docker", "Deployment"],
-      driveLink: "https://drive.google.com/file/d/your-cert-id-3"
-    },
-    {
-      title: "API Development & Security",
-      issuer: "Developer Institute",
-      date: "2023",
       status: "Completed",
       description: "Specialized certification focusing on secure API development, authentication, and best practices.",
-      skills: ["REST APIs", "JWT", "OAuth", "API Security"],
+      skills: ["Java"],
       driveLink: "https://drive.google.com/file/d/your-cert-id-4"
-    }
+    },
+    {
+      title: "PHP MySQL",
+      issuer: "Cloud Academy",
+      date: "2024",
+      status: "Completed",
+      description: "Learning cloud computing concepts, AWS services, and cloud-based backend deployment strategies.",
+      skills: ["PHP", "MySQL"],
+      driveLink: "https://drive.google.com/file/d/your-cert-id-3"
+    },
   ];
 
   return (
@@ -139,7 +139,7 @@ const Certifications = () => {
           ))}
         </div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -154,7 +154,7 @@ const Certifications = () => {
               and best practices in backend development.
             </p>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
