@@ -28,7 +28,7 @@ function App() {
         <Projects />
         <Certifications />
         <Experience />
-        <Extracurricular />
+        {/* <Extracurricular /> */}
         <Contact />
       </motion.main>
       <Footer />

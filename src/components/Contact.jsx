@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink } from 'lucide-react';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,11 +11,23 @@ const Contact = () => {
     message: ''
   });
 
-  const handleSubmit = (e) => {
+  const [status, setStatus] = useState({ loading: false, success: null, error: null });
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // You can integrate with email service or backend API
+    setStatus({ loading: true, success: null, error: null });
+    try {
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // replace with your EmailJS service ID
+        'YOUR_TEMPLATE_ID', // replace with your EmailJS template ID
+        formData,
+        'YOUR_USER_ID' // replace with your EmailJS user/public key
+      );
+      setStatus({ loading: false, success: 'Message sent successfully!', error: null });
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (err) {
+      setStatus({ loading: false, success: null, error: 'Failed to send message. Please try again.' });
+    }
   };
 
   const handleChange = (e) => {
@@ -169,7 +182,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-purple-400 focus:ring-1 focus:ring-purple-400 transition-colors duration-300"
-                      placeholder="John Doe"
+                      placeholder="Your Name"
                     />
                   </div>
                   
@@ -185,7 +198,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-purple-400 focus:ring-1 focus:ring-purple-400 transition-colors duration-300"
-                      placeholder="john@example.com"
+                      placeholder="your@mail.com"
                     />
                   </div>
                 </div>
@@ -227,10 +240,23 @@ const Contact = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-lg flex items-center justify-center space-x-2 hover:shadow-lg transition-all duration-300"
+                  disabled={status.loading}
                 >
                   <Send className="h-5 w-5" />
-                  <span>Send Message</span>
+                  <span>{status.loading ? 'Sending...' : 'Send Message'}</span>
                 </motion.button>
+                {status.success && (
+                  <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative text-center mt-4" role="alert">
+                    <strong className="font-bold">Success! </strong>
+                    <span className="block sm:inline">{status.success}</span>
+                  </div>
+                )}
+                {status.error && (
+                  <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative text-center mt-4" role="alert">
+                    <strong className="font-bold">Error! </strong>
+                    <span className="block sm:inline">{status.error}</span>
+                  </div>
+                )}
               </form>
             </div>
           </motion.div>
