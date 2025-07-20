@@ -4,8 +4,8 @@ import { Code, Database, Server, Cloud, Globe, GitBranch } from "lucide-react";
 
 const Skills = () => {
   const skills = [
-    { name: "JavaScript", icon: Code, color: "text-yellow-400" },
-    { name: "Java", icon: Code, color: "text-blue-400" },
+    { name: "Java", icon: Code, color: "text-yellow-400" },
+    { name: "JavaScript", icon: Code, color: "text-blue-400" },
     { name: "Node.js", icon: Server, color: "text-green-500" },
     { name: "Express.js", icon: Server, color: "text-gray-400" },
     { name: "REST APIs", icon: Cloud, color: "text-purple-400" },
@@ -13,7 +13,9 @@ const Skills = () => {
     { name: "Wordpress", icon: Globe, color: "text-blue-500" },
     { name: "MySQL", icon: Database, color: "text-blue-300" },
     { name: "PostgreSQL", icon: Database, color: "text-blue-600" },
+    { name: "MongoDB", icon: Database, color: "text-blue-600" },
     { name: "GitHub", icon: GitBranch, color: "text-gray-300" },
+    { name: "Git", icon: GitBranch, color: "text-orange-500" },
     { name: "Postman", icon: Cloud, color: "text-orange-500" },
   ];
 

@@ -10,10 +10,11 @@ const Education = () => {
       institution: "K.K. Wagh Institute of Engineering Education & Research, Nashik. ",
       location: "Nashik, Maharashtra",
       duration: "2023 - 2025",
-      status: "Pursuing",
+      status: "Completed",
+       cgpa: "8.82 CGPA",
       highlights: [
-        "Focus on Backend Development and System Design",
-        "Relevant Coursework: Data Structures, Algorithms, Database Management",
+        "Learning backend development and database systems",
+        "Completed projects using Node.js and MongoDB",
         "Active participation in coding competitions and tech events"
       ]
     }, {
@@ -23,10 +24,11 @@ const Education = () => {
       location: "Chalisgaon, Maharashtra",
       duration: "2020 - 2023",
       status: "Completed",
+       cgpa: "9.82 CGPA",
       highlights: [
-        "Focus on Backend Development and System Design",
-        "Relevant Coursework: Data Structures, Algorithms, Database Management",
-        "Active participation in coding competitions and tech events"
+         "Built strong programming fundamentals",
+         "Worked on academic projects using PHP and MySQL",
+          "Involved in coding contests and seminars"
       ]
     }
   ];
@@ -79,6 +81,10 @@ const Education = () => {
                         <div className="flex items-center text-gray-400">
                           <MapPin className="h-5 w-5 mr-2" />
                           <span>{edu.location}</span>
+                        </div>
+                        <div className="flex items-center text-gray-400">
+                          <GraduationCap className="h-5 w-5 mr-2" />
+                          <span>{edu.cgpa}</span>
                         </div>
                         <div className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm">
                           {edu.status}

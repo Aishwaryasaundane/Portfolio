@@ -11,7 +11,7 @@ const Certifications = () => {
       status: "Completed",
       description: "Comprehensive certification covering Node.js, Express.js, databases, and API development best practices.",
       skills: ["C"],
-      driveLink: "https://drive.google.com/file/d/your-cert-id-1"
+      driveLink: "https://drive.google.com/file/d/1GsZU6Wg40xd7kfZ014A03gYkV3DScB7U/view?usp=drive_link"
     },
     {
       title: "C++ Programming Course",
@@ -20,7 +20,7 @@ const Certifications = () => {
       status: "Completed",
       description: "Advanced certification in database design, optimization, and management with focus on SQL and NoSQL databases.",
       skills: ["C++"],
-      driveLink: "https://drive.google.com/file/d/your-cert-id-2"
+      driveLink: "https://drive.google.com/file/d/1XmXcoOySWQ62wjnnvX3iRPjlbrfMluKE/view?usp=drive_link"
     },
     {
       title: "JavaFull Stack Course",
@@ -29,7 +29,7 @@ const Certifications = () => {
       status: "Completed",
       description: "Specialized certification focusing on secure API development, authentication, and best practices.",
       skills: ["Java"],
-      driveLink: "https://drive.google.com/file/d/your-cert-id-4"
+      driveLink: "https://drive.google.com/file/d/1VeSO0o8R7y-RhYbp4RCn422Ah4y7gkr6/view?usp=drive_link"
     },
     {
       title: "PHP MySQL",

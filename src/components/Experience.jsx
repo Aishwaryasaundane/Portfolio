@@ -12,12 +12,12 @@ const Experience = () => {
       type: "Internship",
       description: "Worked on developing RESTful APIs and database optimization for a client management system. Gained hands-on experience with Node.js, Express.js, and MongoDB.",
       achievements: [
-        "Developed 15+ REST API endpoints for client management",
-        "Optimized database queries resulting in 40% performance improvement",
-        "Collaborated with a team of 5 developers using Agile methodology",
-        "Implemented JWT-based authentication system"
+        "Worked on WordPress websites using Elementor, custom themes, and plugins",
+        "Developed and integrated REST APIs using Node.js and Express.js",
+        "Managed MongoDB databases and performed basic optimizations",
+        "Integrated headless CMS (Strapi) into backend workflows"
       ],
-      technologies: ["PHP","Wordpress","Node.js", "Express.js", "MongoDB", "JWT", "Git"],
+      technologies: ["PHP","Wordpress","Node.js", "Express.js", "MongoDB", "GitHub", "Git", "Strapi"],
       certificateLink: "https://drive.google.com/file/d/internship-cert-1"
     },
    

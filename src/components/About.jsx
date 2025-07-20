@@ -30,8 +30,8 @@ const About = () => {
               <User className="h-12 w-12 text-purple-400 mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Professional Summary</h3>
               <p className="text-gray-300 leading-relaxed">
-                I am a dedicated Backend Developer and Computer Science student with a passion for creating 
-                robust and scalable server-side applications. Currently pursuing my B.Tech degree while 
+                I am a dedicated Backend Developer and Computer Application student with a passion for creating 
+                robust and scalable server-side applications. Completed my MCA degree while 
                 gaining practical experience through various projects and internships.
               </p>
             </div>
@@ -57,8 +57,8 @@ const About = () => {
               <Heart className="h-8 w-8 text-purple-400 mb-4" />
               <h4 className="text-xl font-semibold text-white mb-2">Interests</h4>
               <p className="text-gray-300">
-                Backend Architecture, Database Design, API Development, Cloud Technologies, 
-                System Design, and emerging technologies in the software development ecosystem.
+                Creating websites using WordPress,Writing backend code in PHP and Node.js,
+                Making and connecting APIs,Working with MySQL and MongoDB databases.
               </p>
             </div>
           </motion.div>
@@ -74,10 +74,9 @@ const About = () => {
           <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-md rounded-2xl p-8 border border-purple-500/20">
             <h3 className="text-2xl font-bold text-white mb-4">My Journey</h3>
             <p className="text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              My journey in computer science began with curiosity about how software systems work behind the scenes. 
-              Through academic projects, internships, and personal development, I've built a strong foundation in 
-              backend technologies. I'm committed to continuous learning and staying updated with the latest industry trends 
-              to deliver high-quality solutions.
+              As an MCA student, my interest in how software works behind the scenes led me to backend development. 
+              Through academic projects and self-learning, I’ve gained hands-on experience with Node.js, PHP, MySQL, and MongoDB. 
+              I'm focused on writing clean code and continuously learning to keep up with industry trends.
             </p>
           </div>
         </motion.div>
